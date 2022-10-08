@@ -8,6 +8,9 @@
  *         next = null;
  *     }
  * }
+ Sol - when fast = slow this means there is cycle.
+ 
+ 
  */
 public class Solution {
     public boolean hasCycle(ListNode head) {
