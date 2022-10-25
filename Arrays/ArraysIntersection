@@ -19,8 +19,8 @@ class Solution {
         Arrays.sort(nums2);
         
         List<Integer> ls = new ArrayList<>();
-        
-        for(int i = 0, j = 0; i< nums1.length && j < nums2.length;){
+        int i = 0, j = 0;
+        while( i< nums1.length && j < nums2.length){
             
             if(nums1[i] == nums2[j]){
                 
