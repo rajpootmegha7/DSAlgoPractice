@@ -22,10 +22,11 @@ public int longestConsecutive(int[] nums) {
             count++;
             }
            else {
+           //This is important when there are more than one consequetive sequence then we will return the max
                 if(max < count) {
                     max = count;
                 }
-                count = 0;
+                count = 0; // Reset the count to 0 to store the new count.
             }
         }
         return Math.max(max+1,count+1);
