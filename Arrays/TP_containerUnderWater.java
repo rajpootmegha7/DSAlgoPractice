@@ -12,7 +12,7 @@ class Solution {
         int i = 0;
         int j = height.length -1;
         while(i < j){
-            if((height[i] < height[j])){
+            if((height[i] < height[j])){  // whichever height will be lowest will be considered for this.
                 area = Math.max(area, (height[i]*(j-i)));
                 i++;
             } else {
