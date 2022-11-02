@@ -19,9 +19,9 @@ class Solutions {
       while(k > 0){
              max = Integer.MIN_VALUE;
              for(int i = 0; i < n; i++){
-                   if(max < arr[i]){
+                   if(max < arr[i]){. // Or in one line Math.max(max, arr[i]);
                          max = arr[i];
-                         index = i;
+                         index = i;   // storing this index so that replace the highest to find next highest element.
                                }
                    arr[index] = -1;
                    op[count++] = max;
