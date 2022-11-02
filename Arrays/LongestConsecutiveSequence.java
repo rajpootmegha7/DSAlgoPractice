@@ -1,10 +1,11 @@
 
+/**
 Input: nums = [100,4,200,1,3,2]
 Output: 4
 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
 
 class Solution {
-
+*/
 
 //Optimized solution 
 public int longestConsecutive(int[] nums) {
@@ -29,7 +30,7 @@ public int longestConsecutive(int[] nums) {
                 count = 0; // Reset the count to 0 to store the new count.
             }
         }
-        return Math.max(max+1,count+1);
+        return Math.max(max+1, count+1);
     }
 
 
