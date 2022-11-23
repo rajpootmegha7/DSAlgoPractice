@@ -15,6 +15,7 @@ class Solution {
 
     public int lastStoneWeight(int[] stones) {
         PriorityQueue<Integer> maxHeap = new PriorityQueue();
+        //Adding -ve so that max value will become minimum value because by default queue store min to max values.
         for (int stone : stones) maxHeap.add(-stone);
         while (maxHeap.size() > 1) {
             int stone1 = maxHeap.remove();
