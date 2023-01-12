@@ -41,4 +41,18 @@ class Solution {
        
         return digits;
     }
+    //Solution 2 -----> 
+     public int[] plusOne(int[] digits) {
+        int n = digits.length;
+        for(int i = n-1; i >=0; i--){
+            if(digits[i]< 9){  // If last digit is less than 9 increment it by one
+                digits[i]++;
+                return digits;
+            }
+            digits[i] = 0; // If its greater than or equal to 9 make it zero
+        }
+        int[] new_num = new int[n+1];
+        new_num[0] = 1;
+        return new_num; // This case will run only in one case where 9, 9, 9 and answer will always be 1, 0, 0, 0
+    }
 }
