@@ -27,7 +27,7 @@ class Solution {
                 content++; 
                 break;
             } 
-            g[j] = -1;
+            g[j] = -1; // So that it doesn't increase content again.
          }
         }
        return content;
