@@ -1,3 +1,4 @@
+/**
 Input: grid = [
   ["1","1","1","1","0"],
   ["1","1","0","1","0"],
@@ -5,7 +6,7 @@ Input: grid = [
   ["0","0","0","0","0"]
 ]
 Output: 1
-
+**/
 class Solution {
     public int numIslands(char[][] grid) {
         int row = grid.length;
