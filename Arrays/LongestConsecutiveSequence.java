@@ -48,11 +48,11 @@ public int longestConsecutive(int[] nums) {
             
             HashSet<Integer> hs = new HashSet<>();
             
-            while(j < nums.length-1 && (nums[j]+1 == nums[j+1] || ( nums[j] == nums[j+1])) ){
+            while(j < nums.length-1 && (nums[j]+1 == nums[j+1] || ( nums[j] == nums[j+1])) ){ // value of 1+1 = 2 or 1 = 1
                 
-                hs.add(nums[j]);
-                hs.add(nums[j+1]);
-                j++;
+                hs.add(nums[j]);  
+                hs.add(nums[j+1]);  
+                j++;   
             }
             i = j;
             max = Math.max(max, hs.size());
