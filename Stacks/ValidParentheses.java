@@ -1,9 +1,9 @@
-Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+/** Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
 Input: s = "()[]{}"
 Output: true
 
-
+**/
 
 if (s.length() % 2 != 0) return false;
         Stack<Character> stack = new Stack<>();
