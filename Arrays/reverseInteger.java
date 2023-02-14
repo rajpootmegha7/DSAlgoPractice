@@ -1,8 +1,5 @@
 class Solution {
     public int reverse(int x) { //123
-        //Exit condition
-        if(x < Math.pow(-2,31))return 0;
-        if(x > (Math.pow(2,31))-1) return 0;
         
         //Main logic by mod first break the number and then form the number
         int finalnum = Integer.MIN_VALUE;
@@ -13,6 +10,10 @@ class Solution {
             x = x/10;         //12 //1 //0
         }
         finalnum = finalnum/10; //321
+          //Exit condition
+        if(finalNum > Integer.MAX_VALUE || finalNum<Integer.MIN_VALUE){
+            return 0;
+        }
         if(x<0){
             return (-1*finalnum);
         }
