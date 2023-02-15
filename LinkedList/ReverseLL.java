@@ -23,6 +23,6 @@ class Solution {
         
         }
         
-        return prev; // prev will have the pointer of reversed list.
+        return prev; // 6.IMP NOTE ---- PREV will have the pointer of reversed list.
     }
 }
