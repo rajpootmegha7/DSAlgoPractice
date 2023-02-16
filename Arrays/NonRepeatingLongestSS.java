@@ -36,7 +36,7 @@ class Solution {
         for(int i = 0; i < str.length; i++){
            
             int p = i; // Because I will iterate it.
-            while(p < str.length && !hs.contains(str[p])){
+            while(p < str.length && !hs.contains(str[p])){  // Hashset contains condition is taking care of duplicates here
                 hs.add(str[p]);
                 p++;
             }
