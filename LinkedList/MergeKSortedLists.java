@@ -18,18 +18,18 @@ merging them into one sorted list:
 class Solution1 {
 
     public ListNode mergeKLists(ListNode[] lists) {
-        Queue<Integer> minHeap = new PriorityQueue<>();
+        Queue<Integer> minHeap = new PriorityQueue<>(); // 1. create a queue 
 
-        for (ListNode nodes : lists) {
+        for (ListNode nodes : lists) { // for each list of list
             ListNode current = nodes;
-            while (current != null) {
+            while (current != null) {//  curr of most inside list add it in the queue.
                 minHeap.add(current.val);
-                current = current.next;
+                current = current.next;  
             }
         }
 
-        ListNode dummy = new ListNode(0);
-        ListNode current = dummy;
+        ListNode dummy = new ListNode(0);   // create a new node dummy starting with 0.
+        ListNode current = dummy;   // curr is set to 0.
 
         while (!minHeap.isEmpty()) {
             current.next = new ListNode(minHeap.poll());

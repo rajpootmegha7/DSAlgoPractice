@@ -17,7 +17,7 @@ class Solutions {
       int[] op = new int[n];
       
       while(k > 0){
-             max = Integer.MIN_VALUE;
+             max = Integer.MIN_VALUE;  // max is initialized inside so that when next iteration occurs value reset.
              for(int i = 0; i < n; i++){
                    if(max < arr[i]){. // Or in one line Math.max(max, arr[i]);
                          max = arr[i];
