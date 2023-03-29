@@ -24,3 +24,41 @@ if (s.length() % 2 != 0) return false;
         }
         return stack.isEmpty(); // 6. Stack is empty after everything is removed returns true.
     }
+
+
+//Solution 2 
+class Solution {
+    public boolean isValid(String s) {
+        Stack<Character> stk = new Stack<>();
+        if(s.length() % 2 != 0) return false;
+        for(char ch : s.toCharArray()){
+            switch(ch){
+                case '(':
+                case '{':
+                case '[':
+                    stk.push(ch);
+                    break;
+                case ']':
+                    if(stk.isEmpty() || stk.pop()!='['){
+                        return false;
+                    }
+                    break; 
+                case '}':
+                 if(stk.isEmpty() || stk.pop()!='{'){
+                        return false;
+                    }
+                    break; 
+                case ')':
+                 if(stk.isEmpty() || stk.pop()!='('){
+                        return false;
+                    }
+                    break; 
+
+            }
+
+        }
+        
+    
+    return stk.isEmpty();
+}
+}
