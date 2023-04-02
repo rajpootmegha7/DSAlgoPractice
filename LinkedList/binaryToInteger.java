@@ -39,7 +39,7 @@ class Solution {
         int decimal = 0;
         int count = 0;
      
-        while(st.size() > 0){
+        while(st.size() > 0){. // or !stk.isEmpty()
             int temp = st.pop();
             decimal += temp * Math.pow(2, count);
             count++;
