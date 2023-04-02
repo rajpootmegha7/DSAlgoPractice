@@ -16,10 +16,10 @@ class Solution {
         ListNode prev = null; // 1. Create a node prev and set it to null.
         while(head != null){
            
-            ListNode next = head.next; // 2. Create a temporary node next and save the head.next list there.
+            ListNode tmp = head.next; // 2. Create a temporary node next and save the head.next list there.
             head.next = prev; //3. Point the head.next to prev, to reverse it.
             prev = head; // 4. Move prev to the head.
-            head = next; // 5. Move head to the next where we saved the remaining list.
+            head = tmp; // 5. Move head to the next where we saved the remaining list.
         
         }
         
