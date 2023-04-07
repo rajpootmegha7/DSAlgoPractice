@@ -11,6 +11,11 @@
  *         this.left = left;
  *         this.right = right;
  *     }
+    Steps to follow:
+    1. Create two stack. s1 and s2
+    2. Push root in stack s1
+    3.Loop while s1 is not empty , pop and push in s2. if left not null push in s1 and same with right.
+    4. pop out of s2 and add in the list.
  * }
  */
 class Solution {
