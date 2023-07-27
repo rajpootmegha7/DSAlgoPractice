@@ -26,4 +26,23 @@ class Solution {
         }
         return true;
     }
+    // Better complexity of O(n)
+    public boolean isAnagram(String s, String t) {
+        if(s.length != t.length) return false;
+        int[] store = new store[26];
+
+        for(int i = 0; i < s.length; i++){
+            // If values are gonna be same one will add one [0,0,0,0,1,0,0,......] and another will remove it from it.
+            store[s.charAt[i]-'a']++;
+            store[t.charAt[i]-'a']--;
+        }
+        for(int val : store){
+            if(val != 0) return false;
+        }
+
+        return true;
+        
+    }
 }
+
+
